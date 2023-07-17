@@ -13,10 +13,24 @@
             font-family: monospace;
             background-color: #fff;
         }
-        .box{
+        .boxH{
             display: inline-block;
             display: inline-block;
             padding: 10px;
+            border-radius: 5px;
+            min-width: 40px;
+            height: 40px;
+            border: 3px solid #000000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 1px 0px #000000;
+        }
+        .box{
+            display: inline-block;
+            display: inline-block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10.5px;
+            padding-right: 10.5px;
             border-radius: 5px;
             min-width: 40px;
             height: 40px;
@@ -52,7 +66,7 @@
     <div id="counter">
 
         <h2 class="box" id="days"></h2>
-        <h2 class="box" id="hours"></h2>
+        <h2 class="boxH" id="hours"></h2>
         <h2 class="box" id="minutes"></h2>
         <h2 class="box" id="seconds"></h2>
         <h3>
@@ -77,10 +91,10 @@
     hours = 23 - now.getHours();
     minutes = 59 - now.getMinutes();
     seconds = 59 - now.getSeconds();
-    left_days.innerHTML = days + "<br> <span class=\"small\">days&nbsp</span>"
+    left_days.innerHTML = days + "<br> <span class=\"small\">days</span>"
     left_hours.innerHTML = hours + "<br> <span class=\"small\">hours</span>";
-    left_minutes.innerHTML = minutes + "<br> <span class=\"small\">mins&nbsp</span>";
-    left_seconds.innerHTML = seconds + "<br> <span class=\"small\">secs&nbsp</span>";
+    left_minutes.innerHTML = minutes + "<br> <span class=\"small\">mins</span>";
+    left_seconds.innerHTML = seconds + "<br> <span class=\"small\">secs</span>";
     }
 
 timer = setInterval (showRemaining, 1000) 
